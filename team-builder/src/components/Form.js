@@ -5,8 +5,8 @@ function Form(props) {
     <form>
       <label>First Name
         <input
-          onChange={onInputChange}
-          value={formValues.fname}
+          onChange={props.onInputChange}
+          value={props.formValues.fname}
           name='fname'
           type='text'
         />
@@ -14,8 +14,8 @@ function Form(props) {
 
       <label>Last Name
         <input
-          onChange={onInputChange}
-          value={formValues.lname}
+          onChange={props.onInputChange}
+          value={props.formValues.lname}
           name='lname'
           type='text'
         />
@@ -23,8 +23,8 @@ function Form(props) {
 
       <label>Email
         <input
-          onChange={onInputChange}
-          value={formValues.email}
+          onChange={props.onInputChange}
+          value={props.formValues.email}
           name='email'
           type='text'
         />
@@ -32,8 +32,8 @@ function Form(props) {
 
       <label>Role
         <input
-          onChange={onInputChange}
-          value={formValues.role}
+          onChange={props.onInputChange}
+          value={props.formValues.role}
           name='role'
           type='text'
         />
