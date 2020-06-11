@@ -9,12 +9,22 @@ const initialTeam = [
 
 function App() {
   const [team, setTeam] = useState(initialTeam);
+
   const [formValues, setFormValues] = useState({
     fname: '',
     lname: '',
     email: '',
     role: '',
   });
+  
+  const onInputChange = event => {
+    const inputThatChanged = event.target.name;
+    const newValueForInput = event.target.value; 
+    setFormValues({
+      ...formValues, 
+      [inputThatChanged]: newValueForInput,
+    });
+  };
 
   return (
     <div className="App">
