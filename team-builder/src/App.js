@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {v4 as uuid} from 'uuid';
+import Form from "./components/Form"; 
 import './App.css';
 
 const initialTeam = [
@@ -16,7 +17,7 @@ function App() {
     email: '',
     role: '',
   });
-  
+
   const onInputChange = event => {
     const inputThatChanged = event.target.name;
     const newValueForInput = event.target.value; 
@@ -28,6 +29,11 @@ function App() {
 
   return (
     <div className="App">
+      <Form 
+        onInputChange={onInputChange}
+        formValues={formValues}
+      />
+      
       <h3>Team Members:</h3>
       {team.map(member => 
         <div key={member.id}>
