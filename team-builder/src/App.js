@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {v4 as uuid} from 'uuid';
-import logo from './logo.svg';
 import './App.css';
 
 const initialTeam = [
@@ -13,20 +12,14 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h3>Team Members:</h3>
+      {team.map(member => 
+        <div key={member.id}>
+          <h3>{member.fname} {member.lname}</h3>
+          <p>{member.email}</p>
+          <p>{member.role}</p>
+        </div>
+      )}
     </div>
   );
 }
