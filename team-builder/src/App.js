@@ -27,13 +27,25 @@ function App() {
     });
   };
 
+  const onFormSubmit = event => {
+    event.preventDefault();
+    const newTeamMember = {
+      id: uuid(),
+      fname: formValues.fname,
+      lname: formValues.lname,
+      email: formValues.email,
+      role: formValues.role,
+    };
+    setTeam([ ...team, newTeamMember ]);
+  };
+
   return (
     <div className="App">
       <Form 
         onInputChange={onInputChange}
         formValues={formValues}
       />
-      
+
       <h3>Team Members:</h3>
       {team.map(member => 
         <div key={member.id}>
