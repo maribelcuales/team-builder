@@ -9,6 +9,12 @@ const initialTeam = [
 
 function App() {
   const [team, setTeam] = useState(initialTeam);
+  const [formValues, setFormValues] = useState({
+    fname: '',
+    lname: '',
+    email: '',
+    role: '',
+  });
 
   return (
     <div className="App">
