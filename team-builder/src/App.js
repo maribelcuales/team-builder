@@ -44,6 +44,7 @@ function App() {
       <Form 
         onInputChange={onInputChange}
         formValues={formValues}
+        onFormSubmit={onFormSubmit}
       />
 
       <h3>Team Members:</h3>
